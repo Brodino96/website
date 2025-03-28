@@ -1,56 +1,35 @@
 ---
-title: "Demo Post 1"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Sep 10 2022"
-heroImage: "/post_img.webp"
-tags: ["tokio"]
+title: "Valve released Team Fortress 2's source code"
+description: "What does this mean for the videogames market?"
+pubDate: "Feb 20 2025"
+heroImage: "/TF2.png"
+tags: [ "videogames", "modding", "open source", "TF2" ]
+badge: "New"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
-malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
-pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
-platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada
-fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea
-dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst
-quisque sagittis purus sit amet.
+Anyone who knows me is well aware that Team Fortress 2 has always held a special place in my heart. It’s not only a masterpiece of character design, but also an excellent example of how to create accessible, fun gameplay without sacrificing depth for those who want to master its mechanics.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum
-quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet.
-Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus.
-Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit
-ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt
-dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus
-arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed
-tempus urna et pharetra pharetra massa massa ultricies mi.
+You can imagine my excitement when, a few days ago, I received a notification from the <a target="_blank" href="https://discord.gg/ZnZD9PjqFR">Fortress Zombie</a> Discord: Valve updated the Source SDK repository, making all the TF2 client and server code available. Moreover, in their <a href="https://www.teamfortress.com/post.php?id=238809" target="_blank">blog</a>, they announced that they would be updating the rest of the multiplayer titles based on the Source engine, introducing native support for 64-bit binaries, scalable HUD/UI, and various bug fixes.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam
-sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec.
-Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna
-fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et
-egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel
-turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra
-nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim
-praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus
-egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam
-ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor
-purus non. Amet dictum sit amet justo donec enim.
+This announcement led me to reflect on the current state of the video game industry. I’ve always believed that it’s the quality of the product that brings profit, yet many companies see things the other way around, prioritizing revenue first and making decisions accordingly. The first example that comes to mind is Apex Legends, which experienced a rapid decline due to decisions made by EA. After acquiring Respawn Entertainment in 2017, EA continued to stifle the development team’s vision, as they themselves have stated multiple times.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut
-consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra.
-Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor
-dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor
-dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque
-eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices
-tincidunt arcu. Id cursus metus aliquam eleifend mi.
+And yet, Respawn has already proven they can make exceptional games: just think of Titanfall 2 (also TF2), a title that, even today, is considered by me and many others to be one of the best FPS games ever made.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt
-dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat
-sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida.
-Egestas integer eget aliquet nibh praesent tristique magna.
+### How could other companies follow Valve’s example?
+There isn’t a single answer, but there are some fundamental principles that software houses could and should adopt:
+
+- **Meaningful updates**: A game lives through its community. As long as players have fun, they’ll be motivated to invest time (and money). Updates should improve the gaming experience, not worsen it with decisions that limit enjoyment.
+
+- **Active community involvement**: Without players, a game cannot exist. Their opinions should carry weight in development choices (always applying common sense).
+
+- **Don’t shut down servers without reason**: If a game is no longer as profitable as it once was, that doesn’t mean it should be abandoned. Many titles could be kept online at relatively low cost or, alternatively, entrusted to the community’s management, letting the players themselves determine the game’s natural end.
+
+- **Avoid predatory monetization practices**: Microtransactions and loot boxes should be implemented ethically, without P2W mechanics or psychological strategies pushing players to spend compulsively.
+
+- **Support modding and community creativity**: Official mod tools and support for user-created content can greatly extend a game’s lifespan and strengthen the relationship between developers and players. Team Fortress itself was born from a community mod!
+
+- **Only release games when they’re ready**: Publishing an incomplete or buggy title harms the studio’s reputation and undermines players’ trust. Valve is famous for its “it’ll release when it’s ready” approach, preferring to delay a launch rather than compromise on quality.
+
+- **I have high hopes for the future**: the recent difficulties faced by companies like Ubisoft could be the sign of a necessary revolution in the gaming industry. Perhaps it’s time for those who fund projects to once again trust developers who truly understand what it means to create games loved by players, rather than mere products to squeeze every last cent from.
+
+P.S. The only thing they shouldn’t learn from Valve is their inability to count beyond 2.
