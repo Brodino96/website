@@ -6,7 +6,7 @@ import createSlug from "../../lib/createSlug"
 import GithubCard from "@components/GithubCard.astro"
 
 const posts = (await getCollection("blog")).filter((post) =>
-	post.id.startsWith("it/"),
+	post.id.startsWith("it/")
 )
 posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 

@@ -26,7 +26,9 @@
 		"formatter": {
 			"quoteStyle": "double",
 			"indentStyle": "tab",
-			"semicolons": "asNeeded"
+			"semicolons": "asNeeded",
+			"bracketSpacing": true,
+			"trailingCommas": "none"
 		}
 	}
 }

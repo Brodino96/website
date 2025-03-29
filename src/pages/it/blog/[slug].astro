@@ -6,11 +6,11 @@ import createSlug from "../../../lib/createSlug"
 
 export async function getStaticPaths() {
 	const postEntries = await getCollection("blog", ({ id }) =>
-		id.startsWith("it/"),
+		id.startsWith("it/")
 	)
 	return postEntries.map((entry) => ({
 		params: { slug: createSlug(entry.data.title, entry.slug) },
-		props: { entry },
+		props: { entry }
 	}))
 }
 

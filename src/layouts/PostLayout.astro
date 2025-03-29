@@ -13,7 +13,7 @@ const {
 	updatedDate,
 	heroImage,
 	badge,
-	tags = [],
+	tags = []
 } = Astro.props
 dayjs.extend(localizedFormat)
 const displayDate = dayjs(pubDate).format("ll")

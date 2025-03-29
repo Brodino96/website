@@ -8,7 +8,7 @@ export async function getStaticPaths({ paginate }) {
 	const posts = await getCollection("blog")
 	const filteredPosts = posts.filter((post) => post.id.startsWith("it/"))
 	filteredPosts.sort(
-		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 	)
 	return paginate(filteredPosts, { pageSize: 10 })
 }

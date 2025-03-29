@@ -9,9 +9,9 @@ const blogSchema = z.object({
 	tags: z
 		.array(z.string())
 		.refine((items) => new Set(items).size === items.length, {
-			message: "tags must be unique",
+			message: "tags must be unique"
 		})
-		.optional(),
+		.optional()
 })
 
 const storeSchema = z.object({
@@ -24,7 +24,7 @@ const storeSchema = z.object({
 	oldPricing: z.string().optional(),
 	badge: z.string().optional(),
 	checkoutUrl: z.string().optional(),
-	heroImage: z.string().optional(),
+	heroImage: z.string().optional()
 })
 
 export type BlogSchema = z.infer<typeof blogSchema>
@@ -35,5 +35,5 @@ const storeCollection = defineCollection({ schema: storeSchema })
 
 export const collections = {
 	blog: blogCollection,
-	store: storeCollection,
+	store: storeCollection
 }
