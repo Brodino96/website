@@ -1,0 +1,21 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const url = Astro.url;
+const currentLang = getLangFromUrl(url);
+---
+
+<div class="flex gap-2 justify-center">
+  {Object.entries(languages).map(([lang, label]) => {
+    const path = `/${lang}${url.pathname.replace(/^\/[^/]*/, '')}`;
+    return (
+      <a
+        href={path}
+        class={`btn btn-sm ${currentLang === lang ? 'btn-active' : ''}`}
+      >
+        {label}
+      </a>
+    );
+  })}
+</div>
