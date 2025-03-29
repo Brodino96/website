@@ -5,7 +5,8 @@ import { getCollection } from "astro:content";
 import createSlug from "../../lib/createSlug"
 import GithubCard from "@components/GithubCard.astro";
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection("blog")).filter(post => post.id.startsWith('en/'));
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
 ---
