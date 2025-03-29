@@ -11,8 +11,8 @@ const currentLang = getLangFromUrl(Astro.url)
     <li><a class="py-3 text-base" id="home" href={`/${currentLang}/`}>Home</a></li>
     <li><a class="py-3 text-base" id="projects" href={`/${currentLang}/projects`}>Projects</a></li>
     <li><a class="py-3 text-base" id="blog" href={`/${currentLang}/blog/`}>Blog</a></li>
-    <li class="mt-4"><LanguagePicker /></li>
 </ul>
+<li class="mt-4"><LanguagePicker /></li>
 
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
 const activeItemElem = document.getElementById(sideBarActiveItemID);
