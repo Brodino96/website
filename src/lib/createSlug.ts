@@ -3,18 +3,18 @@
 // import { GENERATE_SLUG_FROM_TITLE } from '../config'
 
 export default function (title: string, staticSlug: string) {
-  return (
-    staticSlug
-      // remove leading & trailing whitespace
-      .trim()
-      // output lowercase
-      .toLowerCase()
-      .replace(/^en\/|^it\//, '')
-      // replace spaces
-      .replace(/\s+/g, '-')
-      // remove special characters
-      .replace(/[^\w-]/g, '')
-      // remove leading & trailing separtors
-      .replace(/^-+|-+$/g, '')
-  )
+	return (
+		staticSlug
+			// remove leading & trailing whitespace
+			.trim()
+			// output lowercase
+			.toLowerCase()
+			.replace(/^en\/|^it\//, "")
+			// replace spaces
+			.replace(/\s+/g, "-")
+			// remove special characters
+			.replace(/[^\w-]/g, "")
+			// remove leading & trailing separtors
+			.replace(/^-+|-+$/g, "")
+	)
 }

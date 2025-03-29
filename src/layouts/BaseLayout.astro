@@ -1,22 +1,22 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import SideBar from "../components/SideBar.astro";
-import { ViewTransitions } from "astro:transitions";
+import BaseHead from "../components/BaseHead.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import SideBar from "../components/SideBar.astro"
+import { ViewTransitions } from "astro:transitions"
 
-import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config";
-import { getLangFromUrl } from '../i18n/utils';
+import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config"
+import { getLangFromUrl } from "../i18n/utils"
 
-const lang = getLangFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url)
 const {
-  image,
-  title = SITE_TITLE,
-  description = SITE_DESCRIPTION,
-  includeSidebar = true,
-  sideBarActiveItemID,
-  ogType,
-} = Astro.props;
+	image,
+	title = SITE_TITLE,
+	description = SITE_DESCRIPTION,
+	includeSidebar = true,
+	sideBarActiveItemID,
+	ogType,
+} = Astro.props
 ---
 
 <!doctype html>

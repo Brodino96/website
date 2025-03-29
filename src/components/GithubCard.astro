@@ -1,28 +1,27 @@
 ---
-const { title, img, desc, url, badge, target = "_blank" } = Astro.props;
+const { title, img, desc, url, badge, target = "_blank" } = Astro.props
 
-let starCount = 0;
+let starCount = 0
 try {
-  const ghPath = new URL(url).pathname.split('/').filter(Boolean);
+	const ghPath = new URL(url).pathname.split("/").filter(Boolean)
 
-  if (ghPath.length === 1) {
-    const [userOrOrg] = ghPath;
-    const res = await fetch(`https://api.github.com/users/${userOrOrg}`);
-    if (res.ok) {
-      const data = await res.json();
-      starCount = data.followers || 0;
-    }
-  }
-  else if (ghPath.length >= 2) {
-    const [owner, repo] = ghPath;
-    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
-    if (res.ok) {
-      const data = await res.json();
-      starCount = data.stargazers_count || 0;
-    }
-  }
+	if (ghPath.length === 1) {
+		const [userOrOrg] = ghPath
+		const res = await fetch(`https://api.github.com/users/${userOrOrg}`)
+		if (res.ok) {
+			const data = await res.json()
+			starCount = data.followers || 0
+		}
+	} else if (ghPath.length >= 2) {
+		const [owner, repo] = ghPath
+		const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`)
+		if (res.ok) {
+			const data = await res.json()
+			starCount = data.stargazers_count || 0
+		}
+	}
 } catch (error) {
-  console.error(error);
+	console.error(error)
 }
 ---
 
