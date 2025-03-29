@@ -8,8 +8,6 @@ badge: "New"
 ---
 
 
-
-
 Chiunque mi conosca sa bene che **Team Fortress 2** ha sempre occupato un posto speciale nel mio cuore. Non è solo un capolavoro di **character design**, ma anche un esempio eccellente di come creare un gameplay accessibile e divertente, senza però rinunciare alla profondità per chi vuole padroneggiarne le meccaniche.
 
 Potete quindi immaginare il mio entusiasmo quando, qualche giorno fa, ho ricevuto una notifica dal Discord di <a target="_blank" href="https://discord.gg/ZnZD9PjqFR">Fortress Zombie</a>: Valve ha aggiornato la repository del **Source SDK**, rendendo disponibile tutto il codice client e server di TF2. Inoltre, nel loro <a href="https://www.teamfortress.com/post.php?id=238809" target="_blank">blog</a>, hanno annunciato che avrebbero aggiornato il resto dei titoli multiplayer basati su Source, introducendo supporto nativo per **binaries a 64-bit**, HUD/UI scalabili e vari bug fix.
