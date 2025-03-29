@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import HorizontalCard from "../../components/HorizontalCard.astro";
 import GithubCard from "@components/GithubCard.astro";
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+<BaseLayout title = "Proggetti" sideBarActiveItemID="projects">
   <div>
     <div class="text-3xl w-full font-bold mb-5">Projects</div>
   </div>
@@ -11,7 +12,7 @@ import GithubCard from "@components/GithubCard.astro";
   <GithubCard
     title="Oxidized Assistant"
     img="/projects/oxidized-assistant.png"
-    desc="An alternative to Home Assistant created using Rust"
+    desc="Un alternativa a Home Assistant creata usando Rust"
     url="https://github.com/Oxidized-Assistant"
     badge="WIP"
   />
@@ -21,7 +22,7 @@ import GithubCard from "@components/GithubCard.astro";
   <GithubCard
     title="Hotkeys"
     img="/projects/hotkeys.png"
-    desc="Honeslty, I just wanted a macro to open the Terminal but AutoHotkey had to be the worst piece of software ever intended"
+    desc="Onestamente, volevo solamente una macro per aprire il terminale ma AutoHotkey doveva essere il peggior software mai creato"
     url="https://github.com/Brodino96/hotkeys",
     badge="NEW"
   />
