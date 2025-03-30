@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import HorizontalCard from "../../components/HorizontalCard.astro"
+import { getCollection } from "astro:content"
+import createSlug from "../../lib/createSlug"
+import GithubCard from "@components/GithubCard.astro"
+
+const posts = (await getCollection("blog")).filter((post) =>
+	post.id.startsWith("it/")
+)
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+
+const last_posts = posts.slice(0, 3)
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Ciao 👋</div>
+    <div class="text-5xl font-bold">Sono Brodino</div>
+    <div class="text-3xl py-3 font-bold">Fonico, Developer e Videogamer</div>
+    <div class="py-2">
+      <text class="text-lg">
+        Questo è il mio sito web personale, esiste solamente perchè volevo un sito web, niente di più e niente di meno.
+        Già che ci sono ho deciso di usarlo per lasciare qui segnati alcuni dei miei progetti preferiti e pensieri
+        relativi agli argomenti più disparati.<br>
+        Buon divertimento!
+      </text>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">I miei progetti {"</>"}</div>
+  </div>
+
+  <GithubCard
+    title="Oxidized Assistant"
+    img="/projects/oxidized-assistant.png"
+    desc="Un alternativa a Home Assistant creata usando Rust"
+    url="https://github.com/Oxidized-Assistant"
+    badge="WIP"
+  />
+  <div class="divider my-0"></div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Ultime dal blog</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/it/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
+</BaseLayout>

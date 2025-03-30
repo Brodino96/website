@@ -1,13 +1,18 @@
 ---
-const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300"; // For primary color replace with `active` class
+const { sideBarActiveItemID } = Astro.props
+const activeClass = "bg-base-300" // For primary color replace with `active` class
+import { getLangFromUrl } from "../i18n/utils"
+import LanguagePicker from "./LanguagePicker.astro"
+
+const currentLang = getLangFromUrl(Astro.url)
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-    <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
-    <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li>
+    <li><a class="py-3 text-base" id="home" href={`/${currentLang}/`}>Home</a></li>
+    <li><a class="py-3 text-base" id="projects" href={`/${currentLang}/projects`}>Projects</a></li>
+    <li><a class="py-3 text-base" id="blog" href={`/${currentLang}/blog/`}>Blog</a></li>
 </ul>
+<li class="mt-4"><LanguagePicker /></li>
 
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
 const activeItemElem = document.getElementById(sideBarActiveItemID);

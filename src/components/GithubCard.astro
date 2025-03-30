@@ -1,0 +1,61 @@
+---
+const { title, img, desc, url, badge, target = "_blank" } = Astro.props
+
+let starCount = 0
+try {
+	const ghPath = new URL(url).pathname.split("/").filter(Boolean)
+
+	if (ghPath.length === 1) {
+		const [userOrOrg] = ghPath
+		const res = await fetch(`https://api.github.com/users/${userOrOrg}`)
+		if (res.ok) {
+			const data = await res.json()
+			starCount = data.followers || 0
+		}
+	} else if (ghPath.length >= 2) {
+		const [owner, repo] = ghPath
+		const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`)
+		if (res.ok) {
+			const data = await res.json()
+			starCount = data.stargazers_count || 0
+		}
+	}
+} catch (error) {
+	console.error(error)
+}
+---
+
+<div class="relative rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
+  {/* Link area */}
+  <a href={url} target={target}>
+    <div class="hero-content flex-col md:flex-row">
+      {/* Image part */}
+      {img && (
+        <img
+          src={img}
+          width="750"
+          height="422"
+          alt={title}
+          class="max-w-full md:max-w-[13rem] rounded-lg"
+          loading="lazy"
+        />
+      )}
+
+      {/* Text part */}
+      <div class="grow w-full">
+        <h1 class="text-xl font-bold">
+          {title}
+          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+        </h1>
+        <p class="py-1 text-1xl">{desc}</p>
+      </div>
+    </div>
+  </a>
+
+  {/* Star (or follower) count in the top-right corner */}
+  {starCount > 0 && (
+    <div class="absolute top-2 right-2 badge badge-outline">
+      {starCount} ★
+    </div>
+  )}
+</div>
