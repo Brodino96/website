@@ -43,19 +43,21 @@ try {
 
       {/* Text part */}
       <div class="grow w-full">
-        <h1 class="text-xl font-bold">
-          {title}
-          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+        <h1 class="text-xl font-bold flex flex-wrap items-center justify-between">
+          <span class="flex items-center">
+            {title}
+            {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+          </span>
+          {starCount > 0 && (
+            <div class="badge badge-outline ml-2">
+              {starCount} ★
+            </div>
+          )}
         </h1>
         <p class="py-1 text-1xl">{desc}</p>
       </div>
     </div>
   </a>
 
-  {/* Star (or follower) count in the top-right corner */}
-  {starCount > 0 && (
-    <div class="absolute top-2 right-2 badge badge-outline">
-      {starCount} ★
-    </div>
-  )}
+  {/* Removing the duplicate star count badge that was in the top-right corner */}
 </div>
