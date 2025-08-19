@@ -1,0 +1,19 @@
+{
+    "landing": {
+        "greetings": "Hello There 👋",
+        "whoami": "Sono Brodino",
+        "description": "Gamer, Fonico and Sviluppatore"
+    },
+    
+    "lang": {
+        "button": "Lingua",
+        "label": "Scegli la tua lingua",
+        "it": "Italiano",
+        "en": "English"
+    },
+
+    "repo": {
+        "title": "Progetti",
+        "loading": "Caricando repositories..."
+    }
+}

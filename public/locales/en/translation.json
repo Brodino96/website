@@ -1,0 +1,19 @@
+{
+    "landing": {
+        "greetings": "Hello There 👋",
+        "whoami": "I'm Brodino",
+        "description": "Gamer, Sound Engineer and Developer"
+    },
+    
+    "lang": {
+        "button": "Language",
+        "label": "Choose your language",
+        "it": "Italiano",
+        "en": "English"
+    },
+
+    "repo": {
+        "title": "My Projects",
+        "loading": "Loading repositories..."
+    }
+}
