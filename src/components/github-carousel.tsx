@@ -17,8 +17,8 @@ interface GitHubCarouselProps {
 }
 
 const defaultRepositoryUrls: string[] = [
-    "https://github.com/Brodino96/discord_bot",
     "https://github.com/Brodino96/dotfiles",
+    "https://github.com/Brodino96/custos",
     "https://github.com/Brodino96/SummonMounts"
 ]
 
